@@ -1,6 +1,9 @@
 footer{
+	@extend %wrapper;
+	width: 1364px; 
 
 	.footer-top{
+
 		background-color: $first-color;
 		padding: 80px 0;
 		text-align: center;
