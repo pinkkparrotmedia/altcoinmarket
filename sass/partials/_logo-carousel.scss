@@ -1,0 +1,43 @@
+.logo-carousel-area{
+	@extend %wrapper;
+	width: 1364px;
+	background-color: $third-color;
+	text-align: center;
+	padding: 58px 50px;
+	img{
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0;
+	}
+
+	.owl-nav{
+		div{
+			width: 12px;
+			height: 32px;
+			display: inline-block;
+			background: {
+				repeat: no-repeat;
+				position: center;
+			}
+			font-size: 0;
+			top: 50%;
+			position: absolute;
+			@include translateY(-50%);
+		}
+
+		.owl-prev{
+			background-image: url(images/logo-carousel-left-arrow.png);
+			left: 0;
+		}
+		.owl-next{
+			background-image: url(images/logo-carousel-right-arrow.png);
+			right: 0;
+		}
+	}
+}
+
+.owl-carousel .owl-item img{
+	width: auto;
+	max-width: 100%;
+	margin: auto;
+}

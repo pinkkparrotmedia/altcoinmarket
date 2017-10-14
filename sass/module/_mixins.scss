@@ -1,0 +1,39 @@
+@mixin border-radius($radius){
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-o-border-radius: $radius;
+}
+
+@mixin translate($val1,$val2){
+	transform: translate($val1,$val2);
+	-webkit-transform: translate($val1,$val2); 
+	-moz-transform: translate($val1,$val2);
+	-o-transform: translate($val1,$val2);
+}
+
+@mixin translateY($val){
+	transform: translateY($val);
+	-webkit-transform: translateY($val);
+	-moz-transform: translateY($val);
+	-o-transform: translateY($val);
+}
+
+@mixin text-heading($size, $weight, $color){
+	font:{
+		size: $size;
+		weight: $weight;
+		family: "Roboto";
+	}
+	color: $color; 
+}
+
+@mixin text-content($size, $weight, $line-height, $color){
+	font:{
+		size: $size;
+		weight: $weight;
+		family: "roboto";
+	}
+	line-height: $line-height;
+	color: $color; 
+}

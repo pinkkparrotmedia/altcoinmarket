@@ -1,0 +1,151 @@
+.services{
+	padding: 100px 0;
+
+	.wrapper{
+		@extend %wrapper;
+		@extend %clearfix;
+		width: 969px;
+
+		@media only screen and (max-width: 1050px) {
+			padding:{
+				left: 50px;
+				right: 50px;
+			}
+		}
+	}
+
+	h1{
+		@extend %page-title;
+	}
+
+	hr{
+		@extend %page-title-divider;
+	}
+
+	[class^="service-sec"]{
+		display: table;
+		font-size: 0;
+		min-height: 245px;
+
+		&:nth-child(odd) .ss-left,
+		&:nth-child(even) .ss-right{
+			@media only screen and (min-width: 769px) {
+				background-color: $fourth-color;
+			}
+		}
+
+		&:nth-child(odd) .ss-left{
+			text-align: center;
+		}
+
+		h2{
+			@include text-heading(18px, bold, $first-color);
+			margin-bottom: 10px;
+		}
+		p{
+			@extend %text-contents-small;
+			color: darken($fourth-color, 60%); 
+			font-weight: 300;
+			line-height: 20px;
+		}
+		> div{
+			vertical-align: middle;
+			height: 100%;
+			padding: 0 40px;
+			@media only screen and (min-width: 769px) {
+				display: table-cell;
+				width: 50%;
+			}
+
+			@media only screen and (max-width: 768px) {
+				padding: 20px 0;
+			}
+		}
+
+	}
+}
+
+.order-service{
+	@extend %wrapper;
+	width: 1364px;
+	background-color: $fourth-color;
+
+	.wrapper{
+		padding: 110px 0;
+		@extend %wrapper;
+		@extend %clearfix;
+		width: 979px;
+
+		@media only screen and (max-width: 1050px) {
+			padding:{
+				right: 50px;
+				left: 50px;
+			}
+		}
+
+		font-size: 0;
+
+		> div{
+			@media only screen and (min-width: 769px) {
+				display: inline-block;
+				vertical-align: top;
+				width: 50%; 
+			}
+		}
+
+		.os-left{
+			@media only screen and (min-width: 769px) { padding-right: 34px; }
+
+			.input{
+				font:{
+					size: 16px;
+					weight: normal;
+					family: inherit;
+				}
+				border: 1px solid #e6e6e6;
+				display: block;
+				width: 100%;
+				padding-left: 20px;
+				@include border-radius(3px);
+				height: 50px;
+				margin-bottom: 23px;
+			}
+
+			form{
+				@extend %wrapper, %clearfix;
+			}
+
+			.phone{
+				@media only screen and ( min-width: 769px) {
+					float: left;
+					width: percentage(231px/455px);
+				}
+			}
+			.submit{
+				@media only screen and ( min-width: 769px) {
+					float: right;
+					width: percentage(197px/455px);
+				}
+				@extend %button-green;
+			}
+		}
+
+		.os-right{
+			padding: 15px 30px 0 35px; 
+			@media only screen and ( max-width: 768px) {
+				padding:{
+					top: 50px;
+					left: 0;
+					right: 0;
+				}
+			}
+			h2{
+				@include text-heading(24px, bold, $first-color); 
+				margin-bottom: 20px;
+			}
+			p{
+				@include text-content(16px, 300, 33px, darken($fourth-color, 60%));
+			}
+		}
+	}
+}

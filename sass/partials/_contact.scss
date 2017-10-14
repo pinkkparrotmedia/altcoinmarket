@@ -1,0 +1,84 @@
+.contact-area{
+	$wrapper-width: 970px;
+
+	background-color: $fourth-color;
+	margin-top: 102px;
+	@media only screen and (max-width: 499px) {
+		margin-top: 50px;
+	}
+	@extend %wrapper;
+	width: 1364px;
+	.wrapper{
+		width: $wrapper-width;
+		@extend %wrapper;
+		@extend %clearfix;
+		padding: 110px 0;
+		@media only screen and (max-width: 1050px) {
+			padding: 70px 50px;
+		}
+	}
+
+	h2{
+		@extend %text-heading-medium; 
+	}
+	p{
+		@extend %text-contents-small; 
+		color: $fifth-color;
+		margin: 17px 0;
+	}
+
+	.input{
+		
+		font:{
+			size: 16px;
+			weight: normal;
+			family: inherit;
+		}
+		border: 1px solid #e6e6e6;
+		display: block;
+		width: 100%;
+		padding-left: 20px;
+		@include border-radius(3px);
+	}
+
+	.form-left-side{
+		input{
+			height: 50px;
+
+			@media only screen and (max-width: 499px) {
+				margin-bottom: 10px;
+			}
+
+			&:first-of-type{
+				@media only screen and (min-width: 500px) {
+					margin-bottom: 22px;
+				}
+			}
+		}
+		@media only screen and (min-width: 500px) {
+			width: percentage(470px/$wrapper-width);
+			float: left;
+		}
+	}
+
+	.form-right-side{
+		@media only screen and (min-width: 500px) {
+			width: percentage(470px/$wrapper-width);
+			float: right;
+		}
+		textarea{
+			height: 100%;
+			height: 122px;
+			padding-top: 11px;
+			resize: none;
+		}
+	}
+
+	.submit{
+		@extend %button-green;
+		margin-top: 22px;
+		@media only screen and (max-width: 500px) {
+			width: 100%;
+		}
+	}
+}

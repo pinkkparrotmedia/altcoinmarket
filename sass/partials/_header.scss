@@ -1,0 +1,11 @@
+header{
+	.wrapper{
+		@extend %wrapper;
+		@extend %clearfix;
+		width: $wrapper-medium;
+		padding: 0 26px;
+		z-index: 2;
+	}
+	padding: 28px 0 20px;
+	background-color: $header-bg-color; 
+}

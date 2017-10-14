@@ -1,0 +1,78 @@
+.subscribe-area{
+	$form-padding-left: 425px;
+	$wrapper: 970px;
+
+	text-align: right;
+	
+		@extend %wrapper;
+		width: 1364px;
+	.wrapper{
+		@extend %wrapper;
+		@extend %clearfix;
+		padding: 25px 0;
+		width: $wrapper;
+		@media only screen and (max-width: 1050px) {
+			padding: {
+				left: 50px;
+				right: 50px;
+			}
+		}
+	}
+	background-color: $second-color;
+
+	h2{
+		font:{
+			weight: bold;
+			size: 24px;
+		}
+		text-align: center;
+		@media only screen and (min-width: 901px) {
+			position: absolute;
+			top: 50%;
+			@include translateY(-50%);
+		}
+		@media only screen and (max-width: 900px) {
+			margin-bottom: 25px;
+		}
+	}
+
+	form{
+		@media only screen and (min-width: 901px) {
+			padding-left: $form-padding-left;
+		}
+		font-size: 0;
+	}
+
+	input{
+		vertical-align: middle;
+	}
+
+	.input{
+		font:{
+			size: 16px;
+			weight: normal;
+			family: inherit;
+		}
+		border: 1px solid #e6e6e6;
+		padding-left: 20px;
+		height: 50px;
+		width: 100%;
+		@media only screen and (min-width: 901px) {
+			width: percentage(325px/($wrapper - $form-padding-left));
+		}
+		@media only screen and (max-width: 900px) {
+			margin-bottom: 20px;
+		}
+		@include border-radius(3px);
+	}
+
+	.submit{
+		@extend %button-green;
+		font-weight: 300;
+		width: 100%;
+		@media only screen and (min-width: 901px) {
+			margin-left: 15px;
+			width: percentage(195px/($wrapper - $form-padding-left));
+		}
+	}
+}
