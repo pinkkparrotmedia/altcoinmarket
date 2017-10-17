@@ -70,6 +70,10 @@
 	width: 1364px;
 	background-color: $fourth-color;
 
+	@media only screen and (max-width: 768px) {
+		text-align: center;
+	}
+
 	.wrapper{
 		padding: 110px 0;
 		@extend %wrapper;

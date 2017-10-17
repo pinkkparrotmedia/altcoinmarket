@@ -1,6 +1,7 @@
 <?php
 include 'includes/header.php';
 include 'includes/banner.php';
+include 'includes/logo-carousel.php';
 ?>
 
 <div class="home-main-section">
@@ -57,7 +58,6 @@ include 'includes/banner.php';
 </div>
 
 <?php
-include 'includes/logo-carousel.php';
 include 'includes/latest-blog.php';
 include 'includes/contact.php';
 include 'includes/subscribe.php';

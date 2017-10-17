@@ -32,6 +32,7 @@
 			background:{
 				image: url(images/blog-img3-tab.png);
 			}
+			margin-bottom: -2px;
 		}
 		@media only screen and (max-width: 499px) {
 			margin-bottom: 30px;
@@ -43,6 +44,7 @@
 		}
 		height: 415px;
 		position: relative;
+		z-index: 2;
 	}
 
 	.blog-right{

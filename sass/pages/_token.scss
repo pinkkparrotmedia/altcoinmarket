@@ -196,7 +196,10 @@
 					right: 20px;
 				}
 			}
-			background-color: rgba($fourth-color, 0.26);
+			@media only screen and (max-width: 768px) {
+				text-align: center;
+			}
+			background-color: $fourth-color;
 
 			h2{
 				@extend %text-heading-medium;

@@ -18,7 +18,7 @@
 			}
 		}
 	}
-	background-color: $second-color;
+	background-color: #777;
 
 	h2{
 		font:{
@@ -40,11 +40,25 @@
 		@media only screen and (min-width: 901px) {
 			padding-left: $form-padding-left;
 		}
-		font-size: 0;
+		@media only screen and (min-width: 901px) {
+			font-size: 0;
+		}
+		text-align: center;
 	}
 
 	input{
 		vertical-align: middle;
+		width: 100%;
+		@media only screen and (max-width: 900px) {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		@media only screen and (max-width: 900px) {
+			width: 100%!important;
+			padding: 0 !important;
+			text-align: center;
+			margin-bottom: 5px;
+		}
 	}
 
 	.input{
@@ -56,12 +70,11 @@
 		border: 1px solid #e6e6e6;
 		padding-left: 20px;
 		height: 50px;
-		width: 100%;
 		@media only screen and (min-width: 901px) {
 			width: percentage(325px/($wrapper - $form-padding-left));
 		}
 		@media only screen and (max-width: 900px) {
-			margin-bottom: 20px;
+			width: 65%;
 		}
 		@include border-radius(3px);
 	}
@@ -69,10 +82,12 @@
 	.submit{
 		@extend %button-green;
 		font-weight: 300;
-		width: 100%;
 		@media only screen and (min-width: 901px) {
 			margin-left: 15px;
 			width: percentage(195px/($wrapper - $form-padding-left));
+		}
+		@media only screen and (max-width: 900px) {
+			width: 34%;
 		}
 	}
 }

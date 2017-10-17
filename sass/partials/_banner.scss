@@ -1,9 +1,22 @@
 .banner{
 	@extend %wrapper;
-	width: 1364px;
+	width: 100%;
+	position: relative;
+	z-index: 1; 
+	&:after{
+		position: absolute;
+	    z-index: -1;
+	    content: '';
+	    left: 0;
+	    right: 0;
+	    top: 0;
+	    bottom: 0;
+	    background: url(images/banner-shape.png) no-repeat right top;
+	    opacity: 0.3;
+	}
+
 	@media only screen and (min-width: 769px) { 
-		height: 587px;
-		margin-top: -80px;
+		height: 507px;
 	}
 	
 	background:{
@@ -15,7 +28,8 @@
 	}
 	
 	.wrapper{
-		padding: 173px 101px 0;  
+		padding: 93px 101px 0;  
+		z-index: 1;
 		@extend %wrapper;
 		width: 1170px;
 		@media only screen and (max-width: 768px) {
@@ -36,12 +50,7 @@
 			weight: bold;
 			size: 40px;
 		}
-
-		@media only screen and (max-width: 768px) {
-			font-size: 25px;
-			line-height: 30px;
-		}
-
+		
 		white-space: pre-line;
 
 		span{

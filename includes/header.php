@@ -9,7 +9,8 @@
 	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>AltcoinMarket</title>
-	<link rel="stylesheet" href="style.css"> 
+	<link rel="stylesheet" href="style.css">
+	<script src="//cdn.trackduck.com/toolbar/prod/td.js" async data-trackduck-id="59e3d077921da1685c6d541a"></script> 
 </head>
 
 <body>
@@ -18,7 +19,7 @@
 	<header>
 		<div class="wrapper">
 			<div class="logo">
-				<a href=""><img src="images/logo.png"></a>
+				<a href="index.php"><img src="images/logo.png"></a>
 			</div>	
 
 			<a class="nav-toggle-button"><i class="fa fa-navicon fa-2x"></i></a>

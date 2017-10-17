@@ -6,6 +6,10 @@
 	@media only screen and (max-width: 499px) {
 		margin-top: 50px;
 	}
+
+	@media only screen and (max-width: 768px) {
+		text-align: center;
+	}
 	@extend %wrapper;
 	width: 1364px;
 	.wrapper{
