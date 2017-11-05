@@ -1,0 +1,41 @@
+%button-green{
+	background-color: $main-button-hex;
+	line-height: 50px;
+	display: inline-block;
+	font:{
+		size: 18px;
+		weight: 300; 
+		family: roboto;
+	}
+	text-align: center;
+	width: 195px;
+	color: #fff;
+	border: 0;
+	@include border-radius(3px);
+
+	&:hover{
+		background-color: $button-border-hex;
+		color: $first-color;
+	}
+}
+
+
+.token-child-btn{
+	color: $first-color;
+	font:{
+		size: 16px;
+		weight: 500;
+	}
+	width: 250px;
+	max-width: 100%;
+	line-height: 50px;
+	text-align: center;
+	border: 1px solid $third-color;
+	display: inline-block;
+	@include border-radius(3px);
+
+	&:hover{
+		background-color: $first-color;
+		color: #fff;
+	}
+}

@@ -1,0 +1,84 @@
+.banner{
+	@extend %wrapper;
+	width: 100%;
+	position: relative;
+	z-index: 1; 
+	&:after{
+		position: absolute;
+	    z-index: -1;
+	    content: '';
+	    left: 0;
+	    right: 0;
+	    top: 0;
+	    bottom: 0;
+	    background: url(images/banner-shape.png) no-repeat right top;
+	    opacity: 0.3;
+	}
+
+	@media only screen and (min-width: 769px) { 
+		height: 507px;
+	}
+	
+	background:{
+		image: url(images/header-bg.png);
+		// size: cover;
+		position: center top;
+		repeat: no-repeat;
+		size: cover; 
+	}
+	
+	.wrapper{
+		padding: 93px 101px 0;  
+		z-index: 1;
+		@extend %wrapper;
+		width: 1170px;
+		@media only screen and (max-width: 768px) {
+			padding: 50px 30px;
+			text-align: center;
+		}
+	}
+
+	.banner-content{
+		@media only screen and (min-width: 769px) {
+			width: 471px;
+		}
+		max-width: 100%; 
+	}
+
+	h2{
+		font:{
+			weight: bold;
+			size: 40px;
+		}
+		
+		white-space: pre-line;
+
+		span{
+			font-size: 30px;
+		}
+
+		small{
+			font:{
+				weight: normal;
+				size: 24px;
+			}
+		}
+	}
+	p{
+		font:{
+			weight: 300;
+			size: 16px;
+		}
+		margin-top: 23px;
+	    line-height: 29px;
+
+	    @media only screen and (min-width: 769px) {
+		    padding-right: 35px;
+		}
+	}
+
+	a{
+		@extend %button-green;
+		margin-top: 20px;
+	}
+}

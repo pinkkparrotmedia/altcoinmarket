@@ -1,0 +1,283 @@
+.token{
+
+	$top-right-column-width: 553px;
+	$border-style: 1px solid #e6e6e6;;
+	$token-top-area-height: 205px;
+
+	padding: 100px 0;
+
+	
+	.wrapper{
+		@extend %wrapper;
+		width: 969px; 
+
+		@media only screen and (max-width: 1050px) {
+			padding: 0 50px; 
+		}
+	}
+	h1{
+		@extend %page-title;
+	}
+
+	hr{
+		@extend %page-title-divider;
+	}
+
+	[class^="token-area"]{
+		margin-bottom: 58px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		text-align: center;
+		color: red;
+		border: $border-style;
+		border:{
+			top-width: 0;
+			bottom-width: 0;
+		}
+
+		.token-top{
+			@extend %clearfix;
+			border: $border-style;
+			border: {
+				left-width: 0;
+				right-width: 0;
+			}
+			position: relative;
+			img{
+				max-width: 100px;
+				height: auto;
+			}
+
+			@media only screen and (min-width: 901px) {
+				padding-right: $top-right-column-width;
+			}
+		}
+
+		.toktop-left{
+			width: 100%;
+			height: $token-top-area-height;
+			padding: 44px 0;
+			position: relative;
+			@media only screen and (min-width: 901px) {
+				float: left;
+			}
+			img{
+				width: 2000px;
+				height: auto;
+			}
+			h2{
+				@extend %text-heading-medium;
+				margin: 15px 0;
+			}
+			p{
+				font:{
+					weight: 300;
+					size: 14px;
+				}
+			}
+			.inner{
+				position: absolute;
+				top: 50%;
+				@include translateY(-50%);
+				left: 0;
+				right: 0;
+			}
+		}
+
+		.token-social-icons{
+			@media only screen and (min-width: 769px) {
+				text-align: left;
+				padding-left: 30px;
+			}
+			margin: 6px 0 2px;
+			li{  
+				display: inline-block;
+				vertical-align: top;
+				margin-right: 3px;
+			}
+			li a{
+				display: block;
+				line-height: 0;
+				width: 20px;
+				text-align: center;
+				padding: 6px 0;
+				color: $sixth-color;
+			}
+
+		}
+
+		.toktop-right{
+			font-size: 0;
+
+			@media only screen and (min-width: 901px) {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: $top-right-column-width;
+			}
+
+			[class^="token-right-area"]{
+				font-size: 14px;
+				display: inline-block;
+				vertical-align: top;
+				width: 50%;
+				border: $border-style;
+	    		border-right: 0;
+				height: $token-top-area-height/2;
+				position: relative;
+
+				.inner{
+					position: absolute;
+					top: 50%;
+					@include translateY(-50%);
+					width: 100%;
+					left: 0;
+
+				}
+
+				&:nth-child(odd){
+					width: 220px;
+					p{
+						text-align: left;
+						padding-left: 30px;
+						@media only screen and (max-width: 768px) {
+							text-align: center;
+							padding: 0;
+						}
+					}
+				}
+
+				&:nth-child(even){
+					width: 332px;
+				}
+
+				@media only screen and (max-width: 901px) {
+					width: 50% !important;
+				}
+
+				@media only screen and (max-width: 768px) {
+					width: 100% !important;
+					padding:{
+						left: 10px;
+						right: 10px;
+					}
+				}
+
+			}
+			
+			.token-right-area1, .token-right-area2{
+				height: 92px;
+			}
+
+			.token-right-area3, .token-right-area4{
+				height: 114px; 
+				border-bottom: 0;
+			}
+			p{
+				white-space: pre-line;
+				line-height: 22px
+			}
+
+			.token-right-area1, .token-right-area3{
+				@media only screen and (max-width: 901px) {
+					border-left: 0;
+				}
+			}
+		}
+
+
+		.token-bottom{
+			text-align: left;
+			border-bottom: $border-style;
+			padding: 30px 60px 53px;
+			@media only screen and (max-width: 900px) {
+				padding:{
+					left: 20px;
+					right: 20px;
+				}
+			}
+			@media only screen and (max-width: 768px) {
+				text-align: center;
+			}
+			background-color: $fourth-color;
+
+			h2{
+				@extend %text-heading-medium;
+				color:  #696969;
+				margin-bottom: 19px; 
+			}
+			p{
+				font:{
+					size: 14px;
+					weight: 300;
+				}
+			    line-height: 23px;
+			    margin-bottom: 25px;
+			}
+
+			a{
+				font:{
+					size: 16px;
+					weight: 500;
+				}
+				color: $first-color;
+				width: 216px;
+				max-width: 100%;
+				line-height: 50px; 
+				border: 1px solid #dadada;
+				display: inline-block;
+				text-align: center;
+
+				@media only screen and (max-width: 768px) {
+					line-height: 18px;
+					padding: 10px 10px;
+				}
+
+				&:hover{
+					background-color: $first-color;
+					color: #fff;
+				}
+			}
+
+		}
+
+	}
+
+	.token-nav{
+		padding: 30px 0;
+		text-align: center;
+		li{
+			display: inline-block;
+			vertical-align: middle;
+			margin: 4px 8px;
+			a{
+				font:{
+					size: 16px;
+				}
+				color: darken($third-color, 10%);
+				display: block;
+				width: 35px;
+				line-height: 35px;
+				text-align: center;
+				border: 1px solid darken($third-color, 10%);
+				@include border-radius(4px);
+
+				&:hover{ 
+					color: $first-color;
+					border-color: $first-color;
+				}
+			}
+
+			&:first-child,
+			&:last-child{
+				a{
+					font-weight: bold;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
+}
