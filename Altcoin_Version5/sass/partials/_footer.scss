@@ -1,0 +1,167 @@
+footer{
+	 
+	.footer-top{
+		background-color: $first-color;
+		padding: 80px 0;
+		text-align: center;
+		@media only screen and (max-width: 1050px) {
+			padding:{
+				right: 50px;
+				left: 50px;
+			}
+		}
+
+		@media only screen and (max-width: 900px) {
+			padding:{
+				top:40px;
+				bottom:40px;
+			}
+		}
+
+	
+
+		.wrapper{
+			width: 970px;
+			@extend %wrapper;
+			@extend %clearfix;
+		}
+
+		h2{
+			font-weight: bold;
+		}
+	}
+
+	[class^="ft-sect"]{
+		display: inline-block;
+		vertical-align: top; 
+	    text-align: left;
+		@media only screen and (max-width: 1050px) {
+			padding: 0 20px;
+			margin: auto!important;
+		}
+
+		@media only screen and (max-width: 900px) {
+			float: none!important;
+			padding: 20px;
+		}
+
+		@media only screen and (max-width: 768px) {
+			width: 100%;
+			text-align: center!important;
+		}
+	}
+
+	.ft-sect1{
+		float: left;
+		margin-right: 130px;
+		.footer-logo{ 
+			width: 211px;
+			max-width: 100%;
+			display: inline-block;
+			margin-top: 29px;
+			img{
+				max-width: 100%;
+			}
+		}
+	}
+
+	.ft-sect2{
+		margin-right: 138px;
+	}
+	.ft-sect3{
+		margin-right: 118px;
+	}
+
+	.ft-sect2, .ft-sect3{
+		@media only screen and (max-width: 768px) {
+			width: 49%;
+		}
+		@media only screen and (max-width: 420px) {
+			width: 100%;
+		}
+	}
+
+	.ft-sect4{
+		margin-right: -13px;
+    	float: right;
+	}
+
+	
+
+	.footer-links{
+		line-height: 26px;
+		font-size: 14px;
+		a{
+			color: #fff;
+			font-weight: 300;
+		}
+	}
+
+	.social-icons{ 
+		font-size: 14px;
+	    line-height: 26px;
+	    width: 150px;
+	    display: inline-block;
+		ul{
+			margin-top: 15px;
+		}
+		li{
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 13px;
+			margin-bottom: 13px;
+		}
+
+		a{
+			padding: 12px;
+			width: 35px;
+			text-align: center;
+			background-color: $second-color;
+			line-height: 0;
+    		display: block;
+    		color: #fff;
+		}
+
+	}
+}
+
+.footer-bot{
+	border-top: 1px solid #212d4e;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+
+	@media only screen and (max-width: 768px) {
+	   text-align: center;
+	    line-height: 18px;
+	}
+	
+	.wrapper{
+		@extend %wrapper;
+		@extend %clearfix;
+		padding: 15px 26px;
+		width: 1170px;
+	}
+	background-color: $first-color;
+	.copyright{
+		@media only screen and (min-width: 769px) {
+			float: left;
+		}
+		
+	}
+
+	.fbot-link{
+		
+		@media only screen and (min-width: 769px) {
+			float: right;
+		}
+
+		li{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		a{
+			color: #fff;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+.about-us{
+
+	padding: 100px 0 0;
+
+	.wrapper{
+		@extend %wrapper;
+		@extend %clearfix;
+		width: 969px;
+		max-width: 100%;
+		@media only screen and ( max-width: 1051px) {
+			padding: {
+				left: 50px;
+				right: 50px;
+			}
+		}
+	}
+
+	h1{
+		@extend %page-title;
+	}
+
+	hr{
+		@extend %page-title-divider;
+	}
+
+	.content{
+		padding-top: 26px;
+		img{
+			@media only screen and ( min-width: 769px) {
+				float: left;
+				margin-right: 30px;
+			}
+			margin-bottom: 30px;
+			max-width: 100%;
+		}
+		h2{
+			@include text-heading(18px, bold, $first-color);
+		}
+		p{
+			@include text-content(14px, 300, 22px, #464646);
+			margin-top: 15px;
+		}
+
+		@media only screen and ( max-width: 768px) {
+			text-align: center;
+		}
+	}
+	
+}

@@ -1,0 +1,57 @@
+.navigation{
+	float: right;
+	margin: 5px -12px 0 0; 
+	li{
+		@media only screen and (min-width: 769px) {
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0 5px;
+		}
+		@media only screen and (max-width: 768px) {
+			margin: 13px 0;
+		}
+	}	
+
+	a{
+		color: #fff;
+		font:{
+			weight: 300;
+			size: 14px;
+		}
+		position: relative;
+		padding-bottom: 4px;
+
+		&:after{
+			content: '';
+			position: absolute;
+			border-bottom: 1px solid #fff;
+			width: 0;
+			left: 0;
+			bottom: 0;
+		}
+
+		&:hover:after{
+			width: 100%;
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		display: none;
+		float: none;
+		margin: auto;
+		clear: both;
+		overflow: hidden;
+		text-align: right;
+	}
+}
+
+
+.nav-toggle-button{
+	float: right;
+    font-size: 10px;
+    padding: 5px 0;
+    
+	@media only screen and (min-width: 769px) {
+		display: none;
+	}
+}
